@@ -1,13 +1,18 @@
 import { NotificationItem } from "./index.js";
-function NotificationsList({ notifications, handleMarkAsRead }) {
+function NotificationsList({
+  notifications,
+  handleMarkAsRead,
+  handleMarkAllRead,
+  unreadNotifications,
+}) {
   return (
     <div className="notificationsList">
       <div className="header">
         <div className="header-content">
           <h1>Notifications</h1>
-          <span>3</span>
+          <span>{unreadNotifications}</span>
         </div>
-        <button>Mark all as read</button>
+        <button onClick={handleMarkAllRead}>Mark all as read</button>
       </div>
       {notifications.map((notification) => (
         <NotificationItem

@@ -11,16 +11,30 @@ function NotificationItem({ notification, handleMarkAsRead }) {
       }
       onClick={() => handleMarkAsRead(notification.id)}
     >
-      <UserAvtar img={notification.img} />
       <div>
-        <NotificationContent
-          type={notification.type}
-          userName={notification.user}
-          time={notification.time}
-          read={notification.read}
-        />
-        {notification.type === "private_message" && (
-          <MessagePrev content={notification.content} />
+        <div style={{ display: "flex", gap: "16px" }}>
+          <UserAvtar img={notification.img} />
+          <div
+            style={{ display: "flex", gap: "16px", flexDirection: "column" }}
+          >
+            <NotificationContent
+              type={notification.type}
+              userName={notification.user}
+              time={notification.time}
+              read={notification.read}
+              {...(notification.userPost && {
+                userPost: notification.userPost,
+              })}
+            />
+
+            {notification.type === "private_message" && (
+              <MessagePrev content={notification.content} />
+            )}
+          </div>
+        </div>
+
+        {notification.userPost && (
+          <img src="/assets/images/image-chess.webp" className="user-post" />
         )}
       </div>
     </div>

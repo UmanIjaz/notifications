@@ -40,6 +40,7 @@ const initialNotifications = [
     id: 5,
     user: "Kimberly Smith",
     img: "/assets/images/avatar-kimberly-smith.webp",
+    userPost: "/assets/images/image-chess.webp",
     type: "comment",
     content: "your picture",
     time: "1 week ago",

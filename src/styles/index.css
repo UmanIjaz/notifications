@@ -25,7 +25,13 @@ body {
 .user-name {
   color: var(--primary-dark);
 }
-
+.user-post {
+  width: 40px;
+  height: 40px;
+}
+.user-post:hover {
+  cursor: pointer;
+}
 #wrapper {
   display: flex;
   justify-content: center;
@@ -94,7 +100,7 @@ body {
 
 .notificationItem > div {
   display: flex;
-  flex-direction: column;
+  width: 100%;
   gap: 1rem;
 }
 

@@ -1,4 +1,4 @@
-function NotificationContent({ type, userName, time, read }) {
+function NotificationContent({ type, userName, time, read, userPost }) {
   let message;
 
   switch (type) {
@@ -56,7 +56,7 @@ function NotificationContent({ type, userName, time, read }) {
         <span>
           <span>
             <strong className="user-name">{userName}</strong> commented on your
-            post
+            picture
           </span>
         </span>
       );
@@ -84,10 +84,12 @@ function NotificationContent({ type, userName, time, read }) {
 
   return (
     <div className="notificationContent">
-      <p>
-        {message}
-        {!read && <span className="redDot"></span>}
-      </p>
+      <span>
+        <p>
+          {message}
+          {!read && <span className="redDot"></span>}
+        </p>
+      </span>
       <p>{time}</p>
     </div>
   );
