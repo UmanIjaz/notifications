@@ -1,4 +1,4 @@
-const notifications = [
+const initialNotifications = [
   {
     id: 1,
     user: "Mark Webber",
@@ -64,4 +64,4 @@ const notifications = [
     read: true,
   },
 ];
-export default notifications;
+export default initialNotifications;

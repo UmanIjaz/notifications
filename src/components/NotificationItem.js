@@ -1,5 +1,6 @@
 import { UserAvtar, NotificationContent, MessagePrev } from "./index.js";
-function NotificationItem({ notification }) {
+
+function NotificationItem({ notification, handleMarkAsRead }) {
   return (
     <div
       className="notificationItem"
@@ -8,6 +9,7 @@ function NotificationItem({ notification }) {
           ? { background: "hsl(205.71deg 63.64% 97.84%)" }
           : null
       }
+      onClick={() => handleMarkAsRead(notification.id)}
     >
       <UserAvtar img={notification.img} />
       <div>

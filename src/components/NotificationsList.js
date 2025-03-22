@@ -1,5 +1,5 @@
 import { NotificationItem } from "./index.js";
-function NotificationsList({ notifications }) {
+function NotificationsList({ notifications, handleMarkAsRead }) {
   return (
     <div className="notificationsList">
       <div className="header">
@@ -10,7 +10,11 @@ function NotificationsList({ notifications }) {
         <button>Mark all as read</button>
       </div>
       {notifications.map((notification) => (
-        <NotificationItem key={notification.id} notification={notification} />
+        <NotificationItem
+          key={notification.id}
+          notification={notification}
+          handleMarkAsRead={handleMarkAsRead}
+        />
       ))}
     </div>
   );
