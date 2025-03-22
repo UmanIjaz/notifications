@@ -22,9 +22,7 @@ function NotificationItem({ notification, handleMarkAsRead }) {
               userName={notification.user}
               time={notification.time}
               read={notification.read}
-              {...(notification.userPost && {
-                userPost: notification.userPost,
-              })}
+              content={notification.content}
             />
 
             {notification.type === "private_message" && (

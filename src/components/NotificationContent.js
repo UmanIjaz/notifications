@@ -1,4 +1,4 @@
-function NotificationContent({ type, userName, time, read, userPost }) {
+function NotificationContent({ type, userName, time, read, content }) {
   let message;
 
   switch (type) {
@@ -9,9 +9,7 @@ function NotificationContent({ type, userName, time, read, userPost }) {
             <strong className="user-name">{userName}</strong> reacted to your
             post{" "}
           </span>
-          <strong style={{ color: "hsl(219, 85%, 26%)" }}>
-            My first tournament today
-          </strong>
+          <strong style={{ color: "#777c82" }}>{content}</strong>
         </span>
       );
       break;
@@ -33,9 +31,7 @@ function NotificationContent({ type, userName, time, read, userPost }) {
             <strong className="user-name">{userName}</strong> has joined your
             group{" "}
           </span>
-          <strong style={{ color: "hsl(219, 85%, 26%)" }}>
-            My first tournament today
-          </strong>
+          <strong style={{ color: "#0a317b" }}>{content}</strong>
         </span>
       );
       break;
@@ -68,7 +64,7 @@ function NotificationContent({ type, userName, time, read, userPost }) {
           <span>
             <strong className="user-name">{userName}</strong> left the group{" "}
           </span>
-          <strong>Class group</strong>
+          <strong style={{ color: "#0a317b" }}>{content}</strong>
         </span>
       );
       break;
