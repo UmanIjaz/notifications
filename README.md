@@ -32,7 +32,7 @@ Users should be able to:
 ### Live Preview
 
 - **Solution URL:** [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/your-solution-url)
-- **Live Site URL:** [Live Demo](https://your-live-site-url.com)
+- **Live Site URL:** [Live Demo](https://notifynet.netlify.app/)
 
 ## Development Process
 
