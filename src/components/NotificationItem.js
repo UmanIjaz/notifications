@@ -32,7 +32,7 @@ function NotificationItem({ notification, handleMarkAsRead }) {
         </div>
 
         {notification.userPost && (
-          <img src="/assets/images/image-chess.webp" className="user-post" />
+          <img src="/assets/images/image-chess.webp" alt="User's Post" className="user-post" />
         )}
       </div>
     </div>
